@@ -1,18 +1,19 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using AGorshkov23.AppPaths.Core.Enums;
 using Microsoft.Win32;
 
 namespace AGorshkov23.AppPaths.Add
 {
     internal static class Program
     {
-        private static void Main(string[] args)
+        private static int Main(string[] args)
         {
             if (args.Length < 2)
             {
                 ShowHelp();
-                return;
+                return (int) ExitCode.Success;
             }
 
             var shortName = args[0];
@@ -25,11 +26,12 @@ namespace AGorshkov23.AppPaths.Add
                 : registry.CreateSubKey(shortName);
 
             key.SetValue("", fullPath, RegistryValueKind.String);
+            return (int) ExitCode.Success;
         }
 
         private static void ShowHelp()
         {
-            Console.WriteLine("Showing ap-add help...");
+            Console.WriteLine(Core.Properties.Resources.HelpAppPathsAdd);
         }
     }
 }
