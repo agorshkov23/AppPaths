@@ -1,0 +1,2 @@
+Add the AppPaths entry for the current user:
+ap add <shortname> <path>

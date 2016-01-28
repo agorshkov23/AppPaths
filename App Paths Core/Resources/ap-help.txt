@@ -1,0 +1,6 @@
+usage: ap
+
+These are common AppPaths commands used in various situations:
+
+add the AppPaths entry
+	add			Add AppPaths registry entries
