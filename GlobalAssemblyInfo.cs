@@ -4,4 +4,4 @@
 [assembly: AssemblyDescription("Application Paths manager for Windows.")]
 [assembly: AssemblyCopyright("Copyright © Alexey Gorshkov 2016")]
 [assembly: AssemblyProduct("App Paths")]
-[assembly: AssemblyVersion("0.1.0.1")]
+[assembly: AssemblyVersion("0.1.1.2")]
