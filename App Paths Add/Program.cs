@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using Microsoft.Win32;
 
@@ -8,6 +9,12 @@ namespace AGorshkov23.AppPaths.Add
     {
         private static void Main(string[] args)
         {
+            if (args.Length < 2)
+            {
+                ShowHelp();
+                return;
+            }
+
             var shortName = args[0];
             var filePath = args[1];
             var fullPath = Path.GetFullPath(filePath);
@@ -18,6 +25,11 @@ namespace AGorshkov23.AppPaths.Add
                 : registry.CreateSubKey(shortName);
 
             key.SetValue("", fullPath, RegistryValueKind.String);
+        }
+
+        private static void ShowHelp()
+        {
+            Console.WriteLine("Showing ap-add help...");
         }
     }
 }
