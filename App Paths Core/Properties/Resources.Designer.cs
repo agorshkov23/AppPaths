@@ -83,5 +83,14 @@ namespace AGorshkov23.AppPaths.Core.Properties {
                 return ResourceManager.GetString("HelpAppPathsAdd", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string HelpAppPathsShow {
+            get {
+                return ResourceManager.GetString("HelpAppPathsShow", resourceCulture);
+            }
+        }
     }
 }

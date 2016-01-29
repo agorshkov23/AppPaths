@@ -1,0 +1,2 @@
+Show the AppPaths entries for the current user:
+ap show

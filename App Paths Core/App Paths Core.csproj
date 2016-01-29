@@ -52,7 +52,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ap-show-help.txt" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ap-add-help.txt" />
   </ItemGroup>

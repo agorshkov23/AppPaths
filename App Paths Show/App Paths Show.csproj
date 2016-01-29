@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{523E1473-20A8-4C7F-8872-F5120BBD705C}</ProjectGuid>
+    <ProjectGuid>{B0CDF571-C5AA-4969-ACBF-3B0EF8149446}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AGorshkov23.AppPaths</RootNamespace>
-    <AssemblyName>ap</AssemblyName>
+    <RootNamespace>AGorshkov23.AppPaths.Show</RootNamespace>
+    <AssemblyName>ap-show</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,12 +31,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>AGorshkov23.AppPaths.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\GlobalAssemblyInfo.cs">
@@ -46,17 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App Paths Add\App Paths Add.csproj">
-      <Project>{6a2766d4-4725-48fe-953f-6e79e2f357c1}</Project>
-      <Name>App Paths Add</Name>
-    </ProjectReference>
     <ProjectReference Include="..\App Paths Core\App Paths Core.csproj">
       <Project>{84ed9e1a-48a5-4f9d-97d3-ee3de815fb06}</Project>
       <Name>App Paths Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\App Paths Show\App Paths Show.csproj">
-      <Project>{b0cdf571-c5aa-4969-acbf-3b0ef8149446}</Project>
-      <Name>App Paths Show</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
