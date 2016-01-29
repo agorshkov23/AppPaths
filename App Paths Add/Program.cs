@@ -20,7 +20,11 @@ namespace AGorshkov23.AppPaths.Add
             var filePath = args[1];
             var fullPath = Path.GetFullPath(filePath);
 
-            var registry = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\App Paths", true);
+            var currentVersion = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion", true);
+            var registry = currentVersion.GetSubKeyNames().Contains("App Paths")
+                ? currentVersion.OpenSubKey("App Paths", true)
+                : currentVersion.CreateSubKey("App Paths");
+
             var key = registry.GetSubKeyNames().Contains(shortName)
                 ? registry.OpenSubKey(shortName, true)
                 : registry.CreateSubKey(shortName);
